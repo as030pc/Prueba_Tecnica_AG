@@ -1,10 +1,11 @@
-# Sprint 3_Amazonas
+# Prueba Tecnica Academia Geek
 
 ## 1. Descripcion de la aplicacion
-Amazonas es una aplicación de gestión de ventas, que permite que un usuario pueda loguearse con la intencion de poder administrar los productos de una tienda. Con las funcionalidades básicas de un CRUD.
+Un nano-sitio de una sola página con los tipos de formularios y validaciones que normalmente hacemos en una aplicación Web.
+
 
 ## 2. Configuración de la aplicacion en tu computador
-  - Primero descargarga el siguiente repositorio: [as030pc/Amazonas](https://github.com/as030pc/Sprint3-Amazonas)
+  - Primero descargarga el siguiente repositorio: [as030pc/Prueba_Tecnica_AG](https://github.com/as030pc/Prueba_Tecnica_AG)
   - Ejecutar el comando npm install o yarn install
   - Ejecutar el comando npm start o yarn start
 
@@ -16,11 +17,7 @@ Amazonas es una aplicación de gestión de ventas, que permite que un usuario pu
 - Autenticacion con Google y con Facebook
 - Implementacion de Formik y Yup
 - Deploy con firebase
-- Libreria para zoom de imagenes: React-image-magnify
-- Libreria para el mapa y geolocalizacion: leaflet y Navigator.
 
 
 
 ## 4. Despliegue de la aplicacion
-- [Netlify](https://vibrant-nightingale-fca1b9.netlify.app)
-- [Firebase](https://sprint3-as.firebaseapp.com/#/login)
