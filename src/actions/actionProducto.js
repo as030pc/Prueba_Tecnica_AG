@@ -27,6 +27,7 @@ export const agregarAsincrono = (nombres, apellidos, correo, cedula, github, fec
         addDoc(collection(db,"Productos"), producto )
         .then(resp=>{
             dispatch(agregarProducto(producto))
+            dispatch(listAsincronica());
             
         })
         .catch(e=> console.error(e))
@@ -75,6 +76,7 @@ export const deleteAsincrono = (nombre) =>{
             deleteDoc(doc(db,"Productos",docu.id));
         })
         dispatch(eliminar(nombre));
+        dispatch(listAsincronica());
         
     }
 }

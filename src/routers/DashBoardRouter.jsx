@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Redirect, Switch } from 'react-router'
 // import Crud from '../components/Crud'
 import { CrudProducto } from "../components/CrudProducto"
-import PaginaPrincipal from '../pages/PaginaPrincipal'
+
 
 
 const DashBoardRouter = () => {
@@ -19,7 +19,7 @@ const DashBoardRouter = () => {
             <Route
                 exact
                 path="/"
-                component={PaginaPrincipal}
+                component={CrudProducto}
 
             />
             
