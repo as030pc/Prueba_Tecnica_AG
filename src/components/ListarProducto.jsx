@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Table } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { agregarAsincrono, agregarProducto, deleteAsincrono } from '../actions/actionProducto'
+import {deleteAsincrono } from '../actions/actionProducto'
 export const ListarProductos = ({ handleEdit }) => {
     const { productos } = useSelector(store => store.producto)
 

@@ -1,9 +1,9 @@
-import React, {useEffect, useState}  from 'react';
+import React, { useState}  from 'react';
 import { useDispatch } from 'react-redux';
 
 import { useForm } from '../hooks/useForm';
-import { fileUpload } from '../helpers/fileUpload';
-import { agregarAsincrono, Edit, listAsincronica } from '../actions/actionProducto';
+
+import { agregarAsincrono, Edit} from '../actions/actionProducto';
 import { ListarProductos } from './ListarProducto';
 import {activeProduct} from "../actions/actionProducto"
 
