@@ -48,9 +48,9 @@ const PaginaLogin = () => {
 
 
             <Form onSubmit={handleLogin} id="login-form">
-                <img alt="logo Amazonas" src="https://res.cloudinary.com/dobboq5dt/image/upload/v1632956691/Sprint%203-%20Amazonas/logo-amazon_mlu12o.png" />
+                
                 <br/>
-                <h3> Login </h3>
+                <h3> Login GitInnova </h3>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Correo</Form.Label>

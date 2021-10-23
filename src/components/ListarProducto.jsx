@@ -74,7 +74,7 @@ export const ListarProductos = ({ handleEdit }) => {
                                         <td>{element.description}</td>
                                         <td>{element.default_branch}</td>
                                         <td>{element.language}</td>
-                                        <td><a href={element.html_url}> Ir al repositorio </a></td>
+                                        <td><a href={element.html_url} target = "blank" rel="noopener"> Ir al repositorio </a></td>
                                     </tr>
                                 )
 
