@@ -1,15 +1,15 @@
-body {
-    font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
 .crud-container {
    height: 100%;
     padding: 5%;
     align-content: center;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
     border: 1px solid;
+    font-family: 'Roboto', sans-serif;
+
   
 }
 
