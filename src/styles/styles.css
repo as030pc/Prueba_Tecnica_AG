@@ -9,15 +9,34 @@
     margin-left: 10%;
     border: 1px solid;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 
   
 }
 
+.crud-container form {
+    margin-left: 25%;
+}
+
+.crud-container button {
+    margin-top: 5%;
+    margin-right: 50%;
+}
+
+
 .crud-container h1 {
-    margin-top:10%;
-    margin-right: 20%;
+    margin-top: 5%;
     
 }
+
+.formulario, .info-candidato, .usuarios-registrados {
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-radius: 1px;
+    margin: 5px;
+
+}
+
 
 
 
@@ -28,7 +47,7 @@
     position: static;
     bottom: 0vw;
     width: 100%;
-    background-color: rgba(36, 47, 62, 1);
+    background-color: aquamarine;
     color:white;
     
     
@@ -38,7 +57,7 @@
 #login-form {
     padding: 5% 25% 5% 25%;
     text-align: center;
-    background-color: rgba(86, 89, 89, 1);
+    background-color: aquamarine;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;

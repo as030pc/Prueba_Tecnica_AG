@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Redirect, Switch } from 'react-router'
-import { CrudProducto } from '../components/CrudProducto'
+import { Crud } from '../components/Crud'
+
 
 
 
@@ -14,14 +15,14 @@ const DashBoardRouter = () => {
             <Route
                 exact
                 path="/crud"
-                component={CrudProducto}
+                component={Crud}
 
             />
             
             <Route
                 exact
                 path="/"
-                component={CrudProducto}
+                component={Crud}
 
             />
            

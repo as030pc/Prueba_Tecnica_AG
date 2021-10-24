@@ -1,20 +1,20 @@
-import {  typesProducto } from "../types/types";
+import {  typesCandidato } from "../types/types";
 import { addDoc,collection,deleteDoc,getDocs, query,where,doc, updateDoc } from "@firebase/firestore"
 import {db} from "../firebase/firebaseConfig"
 
 
 //Accion sincrona
-export const agregarProducto = (producto) => {
+export const agregarCandidato = (candidato) => {
     return {
-        type:typesProducto.register,
-        payload: producto
+        type:typesCandidato.register,
+        payload: candidato
     }
 }
 
 //Actio asincronica
 export const agregarAsincrono = (nombres, apellidos, correo, cedula, github, fecha) => {
     return (dispatch) => {
-        const producto = {
+        const candidato = {
             nombres,
             apellidos,
             correo,
@@ -24,9 +24,9 @@ export const agregarAsincrono = (nombres, apellidos, correo, cedula, github, fec
         }
         //addDoc recibe como parametro la coleccion y el objeto que se desea adicionar
         //collection recibe como parametro el db y el nombre que se le dara a esta coleccion 
-        addDoc(collection(db,"Productos"), producto )
+        addDoc(collection(db,"Candidatos"), candidato)
         .then(resp=>{
-            dispatch(agregarProducto(producto))
+            dispatch(agregarCandidato(candidato))
             dispatch(listAsincronica());
             
         })
@@ -37,43 +37,43 @@ export const agregarAsincrono = (nombres, apellidos, correo, cedula, github, fec
 
 
 
-export const list = (producto) => {
+export const list = (candidato) => {
     return {
-        type: typesProducto.list,
-        payload:producto
+        type: typesCandidato.list,
+        payload:candidato
     }
     
 }
 
 export const listAsincronica = () => {
     return async (dispatch) => {
-        const querySnapshot = await getDocs(collection(db, "Productos"))
-        const productos = []
+        const querySnapshot = await getDocs(collection(db, "Candidatos"))
+        const candidatos = []
         querySnapshot.forEach((doc)=>{
-            productos.push({
+            candidatos.push({
                 ...doc.data()
             })
         })
-        dispatch(list(productos))
+        dispatch(list(candidatos))
     }
 }
 
 //Eliminar
 export const eliminar = (nombre) => {
     return {
-        type: typesProducto.delete,
+        type: typesCandidato.delete,
         payload: nombre
     }
 }
 
 export const deleteAsincrono = (nombre) =>{
     return async(dispatch) => {
-        const prodCollection = collection(db,"Productos");
+        const prodCollection = collection(db,"Candidatos");
         const q = query(prodCollection,where("nombres","==",nombre))
         const datos = await getDocs(q);
         datos.forEach((docu) => {
             //doc una especie de buscador
-            deleteDoc(doc(db,"Productos",docu.id));
+            deleteDoc(doc(db,"Candidatos",docu.id));
         })
         dispatch(eliminar(nombre));
         dispatch(listAsincronica());
@@ -82,32 +82,32 @@ export const deleteAsincrono = (nombre) =>{
 }
 
 
-export const activeProduct = (id, producto) => {
+export const activeCandidato = (id, candidato) => {
     return {
-        type: typesProducto.active,
+        type: typesCandidato.active,
         payload:{
             id, 
-            ...producto
+            ...candidato
         }
     }
 }
 
-export const Edit = (producto) => {
+export const Edit = (candidato) => {
 
     return async (dispatch) => {
         
-        const prodCollection = collection(db,"Productos");
-        const q = query(prodCollection,where("nombres","==", producto.nombres))
+        const prodCollection = collection(db,"Candidatos");
+        const q = query(prodCollection,where("nombres","==", candidato.nombres))
         const datos = await getDocs(q);
         datos.forEach((docu) => {
             //doc una especie de buscador
-            updateDoc(doc(db,"Productos",docu.id),{
-                nombres:producto.nombres,
-                apellidos:producto.apellidos,
-                fecha:producto.fecha,
-                github:producto.github,
-                cedula:producto.cedula,
-                correo:producto.correo
+            updateDoc(doc(db,"Candidatos",docu.id),{
+                nombres:candidato.nombres,
+                apellidos:candidato.apellidos,
+                fecha:candidato.fecha,
+                github:candidato.github,
+                cedula:candidato.cedula,
+                correo:candidato.correo
                 
             } );
         })

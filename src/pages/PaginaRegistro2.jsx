@@ -37,9 +37,9 @@ const PaginaRegistro2 = () => {
     return (
         <>
          <Form id = "login-form" onSubmit = {formik.handleSubmit}>
-         <img alt="logo Amazonas" src="https://res.cloudinary.com/dobboq5dt/image/upload/v1632956691/Sprint%203-%20Amazonas/logo-amazon_mlu12o.png" />
+        
                 <br/>
-                <h3> Registrate en Amazonas </h3>
+                <h3> Registrate en GitInnova </h3>
                 <Form.Group className="mb-3" controlId="formBasicName" >
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control

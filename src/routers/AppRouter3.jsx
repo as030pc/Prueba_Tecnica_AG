@@ -20,7 +20,7 @@ import PaginaLogin from '../pages/PaginaLogin';
 import DashBoardRouter from './DashBoardRouter';
 import Footer from '../components/Footer';
 import PaginaRegistro2 from '../pages/PaginaRegistro2';
-import { listAsincronica } from '../actions/actionProducto';
+import { listAsincronica } from '../actions/actionCandidato';
 
 
 const AppRouter3 = () => {
